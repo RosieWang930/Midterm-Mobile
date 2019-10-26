@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Molengo|Paytone+One|Sacramento&display=swap" rel="stylesheet">
+  <title>NightSeeker</title>
+</head>
+
+<body>
+
+  <!-- Navigation bar on the right -->
+  <div class="sidenav">
+    <a href="#ABOUT">ABOUT</a>
+    <a href="#MOVIES">MOVIES</a>
+    <a href="#EVENTS">EVENTS</a>
+    <a href="#BOOKING">BOOKING</a>
+  </div>
+
+  <!-- The hero page outside the grid -->
+  <div class="heroTitle">
+    <h1 class="fullWidth title">NightSeeker</h1>
+    <p class="fullWidth intro">-- Your best private theater --</p>
+    <a href="#ABOUT" class="fullWidth intro" style="font-style: normal; margin-top:0;">↓</a>
+  </div>
+
+  <!-- Main Grid -->
+  <div class="mainGrid">
+
+    <!-- First section: ABOUT -->
+    <div class="item-4x3">
+      <h2 class="subtitle" id="ABOUT">ABOUT</h2>
+      <p class="introduction">We are a private movie theater in NYC that only open at night, from <span class="highlight">11:00pm to 5:00am</span>.
+        We offer a wide selection of movies, from the latest cinema movies to old films.
+        We host independent film screenings regularly and available for other customizable event experience, such as birthday parties</p>
+    </div>
+    <img class="item-4x3 images" src="theater.jpg" alt="theater">
+    <div class="breaker"></div>
+
+    <!-- Second section: MOVIES -->
+    <h2 class="fullWidth subtitle" id="MOVIES">MOVIES</h2>
+    <a href="https://www.imdb.com/title/tt0046250/?ref_=nv_sr_5?ref_=nv_sr_5"><img class="item-1x2 movieImg" src="RomanHoliday.jpg" alt=""></a>
+    <a href="https://www.imdb.com/title/tt7547410/"><img class="item-1x2 movieImg" src="Dora.jpg" alt=""></a>
+    <a href="https://www.imdb.com/title/tt5754850/?ref_=nv_sr_1?ref_=nv_sr_1"><img class="item-1x2 movieImg" src="Cubby.jpg" alt=""></a>
+    <a href="https://www.imdb.com/title/tt4975722/?ref_=nv_sr_1?ref_=nv_sr_1"><img class="item-1x2 movieImg" src="Moonlight.jpeg" alt=""></a>
+    <a href="https://www.imdb.com/title/tt7286456/?ref_=fn_al_tt_1"><img class="item-1x2 movieImg" src="Joker.jpg" alt=""></a>
+    <a href="https://www.imdb.com/title/tt0068646/?ref_=nv_sr_1?ref_=nv_sr_1"><img class="item-1x2 movieImg" src="theGodfather.jpg" alt=""></a>
+    <a href="https://www.imdb.com/title/tt3508840/?ref_=nv_sr_1?ref_=nv_sr_1"><img class="item-1x2 movieImg" src="theAssassin.jpg" alt=""></a>
+    <a href="https://www.imdb.com/title/tt0364569/?ref_=nv_sr_2?ref_=nv_sr_2"><img class="item-1x2 movieImg" src="old-boy.jpg" alt=""></a>
+    <div class="breaker"></div>
+
+    <!-- Third section: SPECIAL EVENTS -->
+
+    <div class="item-5x3 images">
+      <img class="images" src="event2.jpg" alt="">
+      <img class="images" src="event1.jpg" alt="">
+      <img class="images" src="event3.jpg" alt="">
+    </div>
+
+    <div class="item-3x2 special">
+      <h2 class="subtitle" id="EVENTS">SPECIAL EVENTS</h2>
+      <ul>
+        <li>Film Premieres</li>
+        <li>Corporate Events</li>
+        <li>Birthday Parties</li>
+        <li>LO-RES Bar</li>
+        <li>Reunions</li>
+        <li>Bachelor parties</li>
+        <li>Graduations</li>
+        <li>......</li>
+      </ul>
+    </div>
+    <div class="breaker"></div>
+
+    <!-- Fourth section: BOOKING YOUR EVENTS -->
+    <h2 class="item-5x2 subtitle" id="BOOKING">BOOK YOUR EVENTS</h2>
+    <div class="item-5x1 formContainer">
+      <form action="action_page.php">
+
+        <label for="fname" class="formTitle">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name..">
+
+        <label for="subject" class="formTitle">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Events Description" style="height:8vmin;"></textarea>
+
+        <input type="submit" value="Submit">
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>@ 2019 by Ruoxi Wang</p>
+  </div>
+</body>
+
+</html>

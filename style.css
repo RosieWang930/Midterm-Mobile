@@ -1,0 +1,451 @@
+html {
+  scroll-behavior: smooth;
+  /* Make the scroll smooth */
+}
+
+body {
+  margin: 12vmin 30vmin 0 30vmin;
+  background: linear-gradient(55deg, #19141e 0%, #18003f 51%, #260021 85%);
+  /* Create a gradient background color */
+  color: white;
+}
+
+p, h1, h2 {
+  margin: 0;
+  padding: 0;
+  /* Eliminate the default margin/padding */
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 20vmin;
+  text-decoration: underline;
+  text-decoration-color: #C004D9;
+  /* Change the color of underline */
+  transition: 0.5s;
+  /* Set the hover speed */
+  border: 7px dashed white;
+  padding: 3vmin 15vmin 3vmin 15vmin;
+  /* Add space between border and text */
+  animation: titleBorder 2s linear 0s infinite alternate;
+  /* Create border animation */
+}
+
+h1:hover {
+  text-decoration-line: underline;
+  text-decoration-color: white;
+  /* Change the color of underline */
+  color: transparent;
+  /* No color for text */
+  -webkit-text-stroke: 0.8px #C004D9;
+  /* Create a hollow text */
+}
+
+h2 {
+  font-family: 'Paytone One', sans-serif;
+  /* subtitle settings */
+  font-size: 15vmin;
+  color: transparent;
+  margin-top: -4vmin;
+}
+
+p {
+  font-family: 'Molengo', sans-serif;
+  /* paragraph settings */
+  font-size: 2.5vmin;
+}
+
+@keyframes titleBorder {
+  from {
+    border: 7px solid white;
+  }
+
+  to {
+    border: 7px dashed #6D0FF2;
+  }
+
+  /* Set the animation */
+}
+
+/* id for anchor */
+/* First subtitle */
+#ABOUT {
+  -webkit-text-stroke: 0.2px #C004D9;
+}
+
+#ABOUT:hover {
+  text-shadow: 0px 0px 30px #C004D9;
+  /* make it looks like neon */
+}
+
+/* Second subtitle */
+#MOVIES {
+  text-shadow: 0px 0px 30px #AB05F2;
+  -webkit-text-stroke: 0.2px #AB05F2;
+}
+
+#MOVIES:hover {
+  /*-webkit-text-stroke: 0.2px #e15cff;*/
+  -webkit-text-stroke: 0.2px #e15cff;
+}
+
+/* Third subtitle */
+#EVENTS {
+  -webkit-text-stroke: 0.2px #6D0FF2;
+  z-index: 2;
+  /* Make the text over the picture */
+}
+
+#EVENTS:hover {
+  text-shadow: 0px 0px 30px #6D0FF2;
+}
+
+/* Fourth subtitle */
+#BOOKING {
+  text-shadow: 0px 0px 20px #3316F2;
+  color: #3316F2;
+  font-size: 20vmin;
+  z-index: -2;
+  /* Make the text under the form */
+}
+
+#BOOKING:hover {
+  color: #3316F2;
+}
+
+.sidenav {
+  padding: 30vmin 0 30vmin 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+  width: 12vmin;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  padding: 2vmin 2vmin 0 2vmin;
+  font-family: 'Molengo', sans-serif;
+  font-size: 1.5vmin;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  font-size: 2vmin;
+}
+
+.mainGrid {
+  display: grid;
+  /* Grid settings */
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-flow: dense;
+  grid-column-gap: 2vmin;
+  grid-row-gap: 10vmin;
+}
+
+.mainGrid * {
+  box-sizing: border-box;
+  /*overflow: hidden;*/
+}
+
+.fullWidth {
+  grid-column-end: span 8;
+}
+
+/* Set the hero page outside the grid using flexbox */
+.heroTitle {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTitle a {
+  text-decoration: none;
+  color: grey;
+}
+
+.heroTitle a:hover {
+  color: white;
+  transition: all 0.3s;
+}
+
+/* Set the intro text */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vmin;
+  font-style: italic;
+  margin: 10vmin 0 10vmin 0;
+}
+
+.highlight {
+  border: 1px solid white;
+  /* Highlight the openning time */
+  font-size: 2.5vmin;
+  padding: 0 1vmin 0 1vmin;
+}
+
+.introduction {
+  padding: 2vmin 7vmin 5vmin 7vmin;
+  line-height: 2em;
+}
+
+.images {
+  width: 100%;
+  /* Make every picture's width equals its grid's width */
+}
+
+.movieImg {
+  width: 100%;
+  padding-top: 2vmin;
+  /* Make the selection bar obvious */
+}
+
+.movieImg:hover {
+  border-top: 10px solid #FFF;
+  /* Create a selection bar */
+}
+
+/* Contain the title and list about events */
+.special {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s;
+}
+
+/* List of events */
+ul {
+  margin-top: 7vmin;
+  list-style-type: none;
+}
+
+li {
+  font-family: 'Molengo', sans-serif;
+  font-size: 2.5vmin;
+  line-height: 2em;
+  transition: all 1s;
+}
+
+li:hover {
+  border: 1px solid white;
+}
+
+/* The empty div manage the space between each section */
+.breaker {
+  height: 5vmin;
+  grid-column-end: span 8;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10vmin 0 10vmin 0;
+}
+
+/* Grid items */
+.item-4x3 {
+  grid-column-end: span 4;
+  grid-row-end: span 3;
+}
+
+.item-1x2 {
+  grid-row-end: span 2;
+}
+
+.item-3x2 {
+  grid-column-end: span 3;
+  grid-row-end: span 2;
+}
+
+.item-5x3 {
+  grid-column-end: span 5;
+  grid-row-end: span 3;
+}
+
+.item-5x2{
+  grid-column-end: span 5;
+  grid-row-end: span 2;
+}
+
+.item-5x1 {
+  grid-column-end: span 5;
+}
+
+/* Change form's text */
+.formTitle {
+  font-size: 2.5vmin;
+  font-family: 'Molengo', sans-serif;
+}
+
+#name, #subject {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Set color for the textarea */
+}
+
+/* The structure below comes from W3School's example of building a  */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], textarea {
+  width: 100%;
+  /* Full width */
+  padding: 2vmin;
+  /* Some padding */
+  border: 1px solid white;
+  /* Gray border */
+  border-radius: 1vmin;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 2vmin;
+  /* Add a top margin */
+  margin-bottom: 3vmin;
+  /* Bottom margin */
+  resize: vertical
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+textarea, input {
+  font-size: 1.5vmin;
+  /* Set font size for the placeholder */
+  color: white;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #3316F2;
+  color: white;
+  padding: 2vmin 3vmin;
+  border: none;
+  border-radius: 1vmin;
+  cursor: pointer;
+  position: relative;
+  left: 76vmin;
+  transition: 0.5s;
+  font-size: 2vmin;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #6D0FF2;
+}
+
+/* Set the place of the form, add some padding and margins*/
+.formContainer {
+  margin-top: -70vmin;
+  grid-column-start: 4;
+  border-radius: 1vmin;
+  padding-bottom: 10vmin;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    float: center;
+    margin: 0;
+    padding: 0 10vmin 0 10vmin;
+  }
+
+  h1 {
+    font-size: 15vmin;
+    border: 2px dashed white;
+    padding: 10vmin 5vmin 10vmin 5vmin
+  }
+
+  .sidenav {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+    right: auto;
+    top: 8vmin;
+    align-items: center;
+    height: auto;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    background-color: rgba(255,0,255,0.3);
+  }
+
+  .sidenav a {
+    font-size: 3vmin;
+    padding: 2vmin;
+    border: 1px solid white;
+  }
+
+  .heroTitle {
+    margin-top: 18vmin;
+  }
+
+  .intro {
+    font-size: 4vmin;
+    font-style: italic;
+    margin: 18vmin 0 18vmin 0;
+  }
+
+  .mainGrid {
+    grid-column-gap: 1vmin;
+  }
+
+  .mainGrid * {
+    overflow: hidden;
+  }
+
+  .item-4x3 {
+    grid-column-end: span 8;
+  }
+
+  .mainGrid a {
+    grid-column-end: span 2;
+    grid-row-end: span 4;
+  }
+
+  .movieImg:hover {
+    box-sizing: border-box;
+    border-top: 3px solid #FFF;
+    padding: 1vmin;
+  }
+
+  .item-5x3{
+    grid-column-end: span 4;
+  }
+
+  .item-3x2{
+    grid-column-end: span 4;
+    overflow: visible;
+  }
+
+  .special h2 {
+    font-size: 10vmin;
+  }
+
+  li {
+    font-size: 3vmin;
+  }
+
+  input[type=submit] {
+    left: 0;
+  }
+
+  .item-5x2{
+    grid-column-end: span 8;
+  }
+}
